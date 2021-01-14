@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   min-height: 832px;
   position: relative;
-  margin-bottom: 140px;
+  margin-bottom: 90px;
   &__top {
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@
       li {
         display: inline-block;
         a {
-          transition: all .3s;
+          transition: all 0.3s;
         }
         &:hover a {
           color: #909090;
@@ -49,18 +49,18 @@
       font-weight: 700;
       position: relative;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -6px;
         left: 0;
         width: 33px;
         height: 33px;
-        background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%);
+        background: linear-gradient(287.74deg, #f58656 8.52%, #fe5626 92.72%);
         box-shadow: 0 4px 8px rgba(205, 169, 41, 0.26);
         border-radius: 59px;
       }
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 4px;
         left: 10px;
@@ -88,7 +88,7 @@
       position: relative;
       img {
         position: absolute;
-        bottom: -50px;
+        bottom: -100px;
         width: 790px;
         left: 67%;
         transform: translateX(-50%);
@@ -107,7 +107,7 @@
       border-radius: 50%;
       text-align: center;
       font-size: 22px;
-      color: #FE5626;
+      color: #fe5626;
     }
     &-description {
       position: absolute;
@@ -120,7 +120,7 @@
       line-height: 22.5px;
       text-align: right;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 25px;
         left: 0;
@@ -130,7 +130,253 @@
       }
       span {
         font-weight: 700;
-        color: #F87848;
+        color: #f87848;
+      }
+    }
+  }
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++    DISHES    ++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.dishes {
+  padding-bottom: 120px;
+  background-color: #fff;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 153px;
+    height: 87px;
+    top: 110px;
+    left: -16px;
+    background-image: url(../images/icons/dishes_icon_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 198px;
+    height: 149px;
+    background-image: url(../images/icons/dishes_icon_2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    top: 300px;
+    right: -40px;
+  }
+  &__cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-price {
+      color: #ffffff;
+      padding: 7px 10px;
+      background-color: #222222;
+      border-radius: 4px;
+      font-weight: 600;
+      position: relative;
+      margin-right: 20px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: -16px;
+        border: 8px solid transparent;
+        border-left-color: #222;
+      }
+    }
+    &-status {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-position: center;
+      background-image: url(../images/icons/cart.svg);
+      background-repeat: no-repeat;
+      background-size: 50%;
+      box-shadow: 0 4px 8px rgba(205, 169, 41, 0.26);
+      position: relative;
+      span {
+        position: absolute;
+        color: #ffffff;
+        font-weight: 600;
+        text-align: center;
+        font-size: 10px;
+        line-height: 17px;
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(116.88deg, #fe3326 -4.28%, #f26e0e 112.69%), #59aaf1;
+        border-radius: 50%;
+        bottom: -5px;
+        right: 0;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__button {
+    text-align: center;
+    margin-bottom: 50px;
+    button {
+      background: linear-gradient(0deg, #ECEEF6, #ECEEF6), #59AAF1;
+      border-radius: 45px;
+      padding: 16px 0 17px;
+      width: 135px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+      &.mixitup-control-active {
+        background: #59AAF1;
+      }
+      & + button {
+        margin-left: 25px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-left: -40px;
+  }
+  &__item {
+    width: 260px;
+    height: 418px;
+    background-image: url(../images/dishes_item_bg.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 25px;
+    position: relative;
+    margin-top: 21px;
+    margin-left: 40px;
+    &-img {
+      padding-left: 45px;
+      margin-bottom: 3px;
+      img {
+        width: 210px;
+      }
+    }
+    &-name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      &--wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px 0 25px;
+        margin-bottom: 8px;
+      }
+    }
+    &-size {
+      font-size: 12px;
+    }
+    &-description {
+      font-size: 12px;
+      line-height: 17px;
+      padding: 0 15px 0 25px;
+      margin-bottom: 19px;
+    }
+    &-price {
+      text-align: center;
+      font-size: 24px;
+      line-height: 34px;
+    }
+    &-btn {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 33px;
+      height: 33px;
+      border: 2px solid #ECEEF6;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: all .3s;
+      cursor: pointer;
+      outline: none;
+      &:hover {
+        background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+        box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+      }
+      &:hover svg path {
+        fill: #fff;
+      }
+    }
+  }
+  &__reload {
+    &-btn {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto;
+      background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%);
+      box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/icons/reload.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++    SLIDER    ++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.slider {
+  position: relative;
+  margin-bottom: 125px;
+  &__item {
+    width: 260px;
+    height: 260px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__inst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    background: linear-gradient(45.04deg, #FD9924 -51.05%, #F65B16 134.89%);
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+    border-radius: 15px;
+    &-link {
+      border: 2px solid rgba(#FFFFFF, .1);
+      border-radius: 15px;
+      padding: 55px;
+      font-size: 24px;
+      line-height: 30px;
+      color: #fff;
+      span {
+        font-weight: 700;
       }
     }
   }
