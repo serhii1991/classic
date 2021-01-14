@@ -145,7 +145,7 @@
   background-color: #fff;
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 153px;
     height: 87px;
@@ -157,7 +157,7 @@
     opacity: 0.1;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 198px;
     height: 149px;
@@ -226,7 +226,7 @@
     text-align: center;
     margin-bottom: 50px;
     button {
-      background: linear-gradient(0deg, #ECEEF6, #ECEEF6), #59AAF1;
+      background: linear-gradient(0deg, #eceef6, #eceef6), #59aaf1;
       border-radius: 45px;
       padding: 16px 0 17px;
       width: 135px;
@@ -236,7 +236,7 @@
       outline: none;
       cursor: pointer;
       &.mixitup-control-active {
-        background: #59AAF1;
+        background: #59aaf1;
       }
       & + button {
         margin-left: 25px;
@@ -300,14 +300,15 @@
       transform: translateX(-50%);
       width: 33px;
       height: 33px;
-      border: 2px solid #ECEEF6;
+      border: 2px solid #eceef6;
       border-radius: 50%;
       background-color: #fff;
-      transition: all .3s;
+      transition: all 0.3s;
       cursor: pointer;
       outline: none;
       &:hover {
-        background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+        background: linear-gradient(287.74deg, #f58656 8.52%, #fe5626 92.72%),
+          linear-gradient(180deg, #fe5626 0%, #f23f0e 100%), #59aaf1;
         box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
       }
       &:hover svg path {
@@ -321,7 +322,7 @@
       height: 60px;
       display: block;
       margin: 0 auto;
-      background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%);
+      background: linear-gradient(287.74deg, #f58656 8.52%, #fe5626 92.72%);
       box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
       border-radius: 50%;
       border: none;
@@ -329,7 +330,7 @@
       cursor: pointer;
       position: relative;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 30px;
         height: 30px;
@@ -365,11 +366,12 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     padding: 20px;
-    background: linear-gradient(45.04deg, #FD9924 -51.05%, #F65B16 134.89%);
-    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+    background: linear-gradient(45.04deg, #fd9924 -51.05%, #f65b16 134.89%);
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2),
+      0px 20px 25px rgba(253, 55, 36, 0.2);
     border-radius: 15px;
     &-link {
-      border: 2px solid rgba(#FFFFFF, .1);
+      border: 2px solid rgba(#ffffff, 0.1);
       border-radius: 15px;
       padding: 55px;
       font-size: 24px;
@@ -378,6 +380,104 @@
       span {
         font-weight: 700;
       }
+    }
+  }
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++    CONTACT    +++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.contact {
+  &__inner {
+    position: relative;
+    padding: 82px 0 250px;
+  }
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__title {
+    margin: 0 auto;
+    max-width: 500px;
+    margin-bottom: 35px;
+  }
+  &__form {
+    form {
+      display: flex;
+      justify-content: center;
+    }
+    input,
+    button {
+      margin: 0 20px;
+      width: 260px;
+      height: 60px;
+      border: 2px solid #eceef7;
+      border-radius: 57px;
+      background-color: #fff;
+    }
+    input {
+      padding: 0 31px;
+      font-size: 16px;
+      &::placeholder {
+        font-size: 14px;
+        line-height: 20;
+        color: 222px;
+      }
+    }
+    button {
+      color: #fff;
+      font-size: 18px;
+      line-height: 15px;
+      font-weight: 700;
+      padding: 0 116px 0 28px;
+      background: linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+      box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 53px;
+        width: 35px;
+        height: 10px;
+        background-image: url(../images/icons/form_button_arrow.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__car {
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++    FOOTER    +++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.footer {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 22px;
+    height: 133px;
+  }
+  &__copy,
+  .footer__author {
+    max-width: 400px;
+    width: 100%;
+  }
+  &__author {
+    text-align: right;
+    span {
+      font-weight: 700;
     }
   }
 }
