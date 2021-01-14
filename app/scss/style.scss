@@ -15,10 +15,24 @@
   margin-bottom: 90px;
   &__top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 105px;
   }
   &__menu {
+    margin-right: 25px;
+    &-btn {
+      padding-top: 34px;
+      cursor: pointer;
+      display: none;
+      width: 25px;
+      div {
+        width: 100%;
+        height: 4px;
+        margin-bottom: 4px;
+        background-color: #000;
+      }
+    }
     font-size: 16px;
     line-height: 20px;
     &-list {
@@ -43,6 +57,7 @@
     justify-content: space-between;
     font-size: 16px;
     line-height: 20px;
+    margin-left: 25px;
     &-phone {
       margin-left: 40px;
       padding-left: 50px;
@@ -224,7 +239,7 @@
   }
   &__button {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     button {
       background: linear-gradient(0deg, #eceef6, #eceef6), #59aaf1;
       border-radius: 45px;
@@ -233,13 +248,11 @@
       border: none;
       font-size: 16px;
       font-weight: 600;
+      margin: 0 13px 25px;
       outline: none;
       cursor: pointer;
       &.mixitup-control-active {
         background: #59aaf1;
-      }
-      & + button {
-        margin-left: 25px;
       }
     }
   }
@@ -371,6 +384,7 @@
       0px 20px 25px rgba(253, 55, 36, 0.2);
     border-radius: 15px;
     &-link {
+      text-align: center;
       border: 2px solid rgba(#ffffff, 0.1);
       border-radius: 15px;
       padding: 55px;
@@ -404,6 +418,7 @@
   &__form {
     form {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
     }
     input,
@@ -481,3 +496,6 @@
     }
   }
 }
+
+
+@import "media";
